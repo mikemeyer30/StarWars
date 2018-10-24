@@ -13,6 +13,7 @@
 		B3E431CA218113400077CA89 /* StarWars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3E431C8218113400077CA89 /* StarWars.xcdatamodeld */; };
 		B3E431CC218113410077CA89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E431CB218113410077CA89 /* Assets.xcassets */; };
 		B3E431CF218113410077CA89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E431CD218113410077CA89 /* LaunchScreen.storyboard */; };
+		B3E431D7218113960077CA89 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E431D6218113960077CA89 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B3E431CB218113410077CA89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E431CE218113410077CA89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3E431D0218113410077CA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3E431D6218113960077CA89 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B3E431CD218113410077CA89 /* LaunchScreen.storyboard */,
 				B3E431D0218113410077CA89 /* Info.plist */,
 				B3E431C8218113400077CA89 /* StarWars.xcdatamodeld */,
+				B3E431D6218113960077CA89 /* APIService.swift */,
 			);
 			path = StarWars;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				B3E431C4218113400077CA89 /* ViewController.swift in Sources */,
 				B3E431C2218113400077CA89 /* AppDelegate.swift in Sources */,
+				B3E431D7218113960077CA89 /* APIService.swift in Sources */,
 				B3E431CA218113400077CA89 /* StarWars.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

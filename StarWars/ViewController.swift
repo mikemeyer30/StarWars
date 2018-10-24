@@ -9,6 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+        // For doing tasks before the view loads
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // Invoke our API Service
+        let service = APIService()
+        service.getDataWith(completion: {(result) in print(result)} )
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
