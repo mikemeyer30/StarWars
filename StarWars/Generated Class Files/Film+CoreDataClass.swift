@@ -29,4 +29,27 @@ public class Film: NSManagedObject {
             
         return nil
     }
-}
+    
+    static func saveInCoreDataWith(array: [[String: AnyObject]]) {
+        
+        // LOOP THROUGH THE RETURNED JSON OBJECTS FROM THE API
+        for dict in array {
+            
+            // FOR EACH JSON OBJECT, CREATE A FILM NSMANAGEDOBJECT
+            // THIS CREATES AN OBJECT
+            // IT ALSO STORES IT IN THE CONTEXT
+             _ = self.createFilmEntityFrom(dictionary: dict)
+        }
+            
+            // SAVE THE ENTITIES TO CORE DATA, USING THE CONTEXT
+            
+            do {
+                try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
+            }
+                
+            catch let error {
+                print(error)
+            }
+        }
+    }
+

@@ -12,7 +12,27 @@ class FilmsTableViewController: UITableViewController {
         
         // Invoke our API Service
         let service = APIService()
-        service.getDataWith(completion: {(result) in print(result)} )
+        
+        
+        service.getDataWith(completion: {
+            
+            (Result) in
+            
+            //Check to see if we get data; if so, save it to core data
+            switch (Result) {
+                
+            case.Success(let rawJSONAPIdata):
+                Film.saveInCoreDataWith(array: rawJSONAPIdata)
+            case.Error(let message):
+                print(message)
+            // PRINT ALL OF THE API JSON TO THE CONSOLE
+            //(result) in print(result)} )
+        
     }
+            
+            
+            CoreDataStack.sharedInstance.applicationDocumentsDirectory()
     
+})
+}
 }
