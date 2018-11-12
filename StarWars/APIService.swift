@@ -44,6 +44,9 @@ class APIService: NSObject {
                     
                     DispatchQueue.main.async {
                         completion(.Success(itemsJsonArray))
+                        
+                        let nc = NotificationCenter.default
+                        nc.post(name: Notification.Name(rawValue: "Dataupdated"), object: nil)
                     }
                     
                     

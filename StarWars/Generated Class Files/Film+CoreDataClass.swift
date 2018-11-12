@@ -51,5 +51,41 @@ public class Film: NSManagedObject {
                 print(error)
             }
         }
+    
+        static func getAllFilms() -> [NSManagedObject] {
+            
+            // STEP 1: GET A REFERENCE TO THE CORE DATA CONTEXT
+            let managedContext = CoreDataStack.sharedInstance.persistentContainer.viewContext
+            
+            // STEP 2: CREATE A FETCH REQUEST FOR A SPECIFIC ENTITY
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Film")
+            
+            // STEP 3: SORT THE OBJECTS
+            let sort = NSSortDescriptor(key: "title", ascending: true)
+            fetchRequest.sortDescriptors = [sort]
+            
+            // STEP 4: CREATE A COLLECTION OF NSMANAGEDOBJECTS (Films)
+            var allFilms = [NSManagedObject]()
+            
+            // STEP 5: Execute the fetch request
+            
+            do {
+                
+                let results = try managedContext.fetch(fetchRequest)
+                //ACTUAL QUERY
+                allFilms = results as! [NSManagedObject]
+                
+            } catch let error as NSError {
+                
+                print("Could not fetch films \(error), \(error.userInfo)")
+                
+                
+            }
+            
+            
+            // STEP 6: Return the Array
+            return allFilms
+        }
+    
     }
 

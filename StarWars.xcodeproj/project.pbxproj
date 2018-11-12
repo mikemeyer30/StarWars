@@ -19,13 +19,16 @@
 		B3C111612187AA1500D886C8 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C111572187AA1500D886C8 /* Person+CoreDataProperties.swift */; };
 		B3C111642187ACE200D886C8 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C111632187ACE200D886C8 /* CoreDataStack.swift */; };
 		B3C111662187B0CD00D886C8 /* FilmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C111652187B0CD00D886C8 /* FilmsTableViewController.swift */; };
+		B3DA4A59219A0473005716EF /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA4A58219A0473005716EF /* PersonTableViewController.swift */; };
 		B3E431C2218113400077CA89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E431C1218113400077CA89 /* AppDelegate.swift */; };
-		B3E431C4218113400077CA89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E431C3218113400077CA89 /* ViewController.swift */; };
 		B3E431C7218113400077CA89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E431C5218113400077CA89 /* Main.storyboard */; };
 		B3E431CA218113400077CA89 /* StarWars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3E431C8218113400077CA89 /* StarWars.xcdatamodeld */; };
 		B3E431CC218113410077CA89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E431CB218113410077CA89 /* Assets.xcassets */; };
 		B3E431CF218113410077CA89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E431CD218113410077CA89 /* LaunchScreen.storyboard */; };
 		B3E431D7218113960077CA89 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E431D6218113960077CA89 /* APIService.swift */; };
+		B3EC1E10219A10BD00531CB4 /* PlanetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC1E0F219A10BD00531CB4 /* PlanetTableViewController.swift */; };
+		B3EC1E12219A176A00531CB4 /* SpeciesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC1E11219A176A00531CB4 /* SpeciesTableViewController.swift */; };
+		B3EC1E14219A19CA00531CB4 /* StarshipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC1E13219A19CA00531CB4 /* StarshipTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,15 +44,18 @@
 		B3C111572187AA1500D886C8 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B3C111632187ACE200D886C8 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B3C111652187B0CD00D886C8 /* FilmsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTableViewController.swift; sourceTree = "<group>"; };
+		B3DA4A58219A0473005716EF /* PersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
 		B3E431BE218113400077CA89 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E431C1218113400077CA89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3E431C3218113400077CA89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B3E431C6218113400077CA89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3E431C9218113400077CA89 /* StarWars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarWars.xcdatamodel; sourceTree = "<group>"; };
 		B3E431CB218113410077CA89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3E431CE218113410077CA89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3E431D0218113410077CA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3E431D6218113960077CA89 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B3EC1E0F219A10BD00531CB4 /* PlanetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetTableViewController.swift; sourceTree = "<group>"; };
+		B3EC1E11219A176A00531CB4 /* SpeciesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesTableViewController.swift; sourceTree = "<group>"; };
+		B3EC1E13219A19CA00531CB4 /* StarshipTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +107,17 @@
 			children = (
 				B3C111622187ABDC00D886C8 /* Generated Class Files */,
 				B3E431C1218113400077CA89 /* AppDelegate.swift */,
-				B3E431C3218113400077CA89 /* ViewController.swift */,
 				B3C111652187B0CD00D886C8 /* FilmsTableViewController.swift */,
 				B3E431C5218113400077CA89 /* Main.storyboard */,
+				B3DA4A58219A0473005716EF /* PersonTableViewController.swift */,
+				B3EC1E0F219A10BD00531CB4 /* PlanetTableViewController.swift */,
 				B3E431CB218113410077CA89 /* Assets.xcassets */,
 				B3E431CD218113410077CA89 /* LaunchScreen.storyboard */,
 				B3E431D0218113410077CA89 /* Info.plist */,
 				B3E431C8218113400077CA89 /* StarWars.xcdatamodeld */,
 				B3E431D6218113960077CA89 /* APIService.swift */,
+				B3EC1E11219A176A00531CB4 /* SpeciesTableViewController.swift */,
+				B3EC1E13219A19CA00531CB4 /* StarshipTableViewController.swift */,
 				B3C111632187ACE200D886C8 /* CoreDataStack.swift */,
 			);
 			path = StarWars;
@@ -185,20 +194,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DA4A59219A0473005716EF /* PersonTableViewController.swift in Sources */,
 				B3C111642187ACE200D886C8 /* CoreDataStack.swift in Sources */,
 				B3C111612187AA1500D886C8 /* Person+CoreDataProperties.swift in Sources */,
-				B3E431C4218113400077CA89 /* ViewController.swift in Sources */,
 				B3E431C2218113400077CA89 /* AppDelegate.swift in Sources */,
 				B3C1115A2187AA1500D886C8 /* Starship+CoreDataClass.swift in Sources */,
 				B3C1115E2187AA1500D886C8 /* Planet+CoreDataClass.swift in Sources */,
 				B3E431D7218113960077CA89 /* APIService.swift in Sources */,
+				B3EC1E14219A19CA00531CB4 /* StarshipTableViewController.swift in Sources */,
 				B3C111582187AA1500D886C8 /* Species+CoreDataClass.swift in Sources */,
 				B3C1115C2187AA1500D886C8 /* Film+CoreDataClass.swift in Sources */,
 				B3C111592187AA1500D886C8 /* Species+CoreDataProperties.swift in Sources */,
 				B3C1115D2187AA1500D886C8 /* Film+CoreDataProperties.swift in Sources */,
 				B3C111662187B0CD00D886C8 /* FilmsTableViewController.swift in Sources */,
+				B3EC1E12219A176A00531CB4 /* SpeciesTableViewController.swift in Sources */,
 				B3C1115F2187AA1500D886C8 /* Planet+CoreDataProperties.swift in Sources */,
 				B3C111602187AA1500D886C8 /* Person+CoreDataClass.swift in Sources */,
+				B3EC1E10219A10BD00531CB4 /* PlanetTableViewController.swift in Sources */,
 				B3E431CA218113400077CA89 /* StarWars.xcdatamodeld in Sources */,
 				B3C1115B2187AA1500D886C8 /* Starship+CoreDataProperties.swift in Sources */,
 			);
