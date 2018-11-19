@@ -20,6 +20,7 @@ class PlanetTableViewController: UITableViewController {
         
         // Invoke our API Service
         let service = APIService()
+        service.query = "planets"
         
         
         service.getDataWith(completion: {

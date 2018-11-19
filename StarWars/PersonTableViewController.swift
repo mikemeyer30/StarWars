@@ -20,6 +20,7 @@ class PersonTableViewController: UITableViewController {
             
             // Invoke our API Service
             let service = APIService()
+            service.query = "people"
             
             
             service.getDataWith(completion: {
@@ -29,8 +30,10 @@ class PersonTableViewController: UITableViewController {
                 //Check to see if we get data; if so, save it to core data
                 switch (Result) {
                     
+                    
                 case.Success(let rawJSONAPIdata):
                     Person.saveInCoreDataWith(array: rawJSONAPIdata)
+                    print(rawJSONAPIdata)
                 case.Error(let message):
                     print(message)
                     // PRINT ALL OF THE API JSON TO THE CONSOLE
@@ -78,4 +81,20 @@ class PersonTableViewController: UITableViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "PersonDetailView" {
+            
+            let PersonDetailView = segue.destination as! PersonDetailViewController
+            
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let selectedPerson = Person.getAllPeople()[indexPath.row]
+                
+            PersonDetailView.selectedPerson = selectedPerson as! Person
+                
+            }
+            
+        }
+        
+    }
 }

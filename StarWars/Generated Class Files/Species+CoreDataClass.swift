@@ -64,7 +64,7 @@ public class Species: NSManagedObject {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Species")
         
         // STEP 3: SORT THE OBJECTS
-        let sort = NSSortDescriptor(key: "title", ascending: true)
+        let sort = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sort]
         
         // STEP 4: CREATE A COLLECTION OF NSMANAGEDOBJECTS (Species)

@@ -22,6 +22,7 @@ class StarshipTableViewController: UITableViewController {
         
         // Invoke our API Service
         let service = APIService()
+        service.query = "starships"
         
         
         service.getDataWith(completion: {

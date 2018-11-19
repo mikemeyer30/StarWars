@@ -62,10 +62,10 @@ public class Starship: NSManagedObject {
         let managedContext = CoreDataStack.sharedInstance.persistentContainer.viewContext
         
         // STEP 2: CREATE A FETCH REQUEST FOR A SPECIFIC ENTITY
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Film")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Starship")
         
         // STEP 3: SORT THE OBJECTS
-        let sort = NSSortDescriptor(key: "title", ascending: true)
+        let sort = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sort]
         
         // STEP 4: CREATE A COLLECTION OF NSMANAGEDOBJECTS (Starship)

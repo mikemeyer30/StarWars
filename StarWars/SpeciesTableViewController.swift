@@ -22,6 +22,7 @@ class SpeciesTableViewController: UITableViewController {
         
         // Invoke our API Service
         let service = APIService()
+        service.query = "species"
         
         
         service.getDataWith(completion: {
@@ -67,7 +68,7 @@ class SpeciesTableViewController: UITableViewController {
         
         // CREATE INSTANCE OF UITableViewCell
         
-        let SpeciesCell = tableView.dequeueReusableCell(withIdentifier: "SpeciesTableCell", for: indexPath)
+        let SpeciesCell = tableView.dequeueReusableCell(withIdentifier: "speciesTableCell", for: indexPath)
         
         
         // Figure out which Species object should appear

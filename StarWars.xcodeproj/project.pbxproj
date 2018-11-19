@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3AD52B221A35A1A00A06A22 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD52B121A35A1A00A06A22 /* PersonDetailViewController.swift */; };
 		B3C111582187AA1500D886C8 /* Species+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1114E2187AA1500D886C8 /* Species+CoreDataClass.swift */; };
 		B3C111592187AA1500D886C8 /* Species+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1114F2187AA1500D886C8 /* Species+CoreDataProperties.swift */; };
 		B3C1115A2187AA1500D886C8 /* Starship+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C111502187AA1500D886C8 /* Starship+CoreDataClass.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B3AD52B121A35A1A00A06A22 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		B3C1114E2187AA1500D886C8 /* Species+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Species+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B3C1114F2187AA1500D886C8 /* Species+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Species+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B3C111502187AA1500D886C8 /* Starship+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Starship+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				B3EC1E11219A176A00531CB4 /* SpeciesTableViewController.swift */,
 				B3EC1E13219A19CA00531CB4 /* StarshipTableViewController.swift */,
 				B3C111632187ACE200D886C8 /* CoreDataStack.swift */,
+				B3AD52B121A35A1A00A06A22 /* PersonDetailViewController.swift */,
 			);
 			path = StarWars;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				B3C1115E2187AA1500D886C8 /* Planet+CoreDataClass.swift in Sources */,
 				B3E431D7218113960077CA89 /* APIService.swift in Sources */,
 				B3EC1E14219A19CA00531CB4 /* StarshipTableViewController.swift in Sources */,
+				B3AD52B221A35A1A00A06A22 /* PersonDetailViewController.swift in Sources */,
 				B3C111582187AA1500D886C8 /* Species+CoreDataClass.swift in Sources */,
 				B3C1115C2187AA1500D886C8 /* Film+CoreDataClass.swift in Sources */,
 				B3C111592187AA1500D886C8 /* Species+CoreDataProperties.swift in Sources */,

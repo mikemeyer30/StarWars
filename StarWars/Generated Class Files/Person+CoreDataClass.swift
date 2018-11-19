@@ -26,8 +26,8 @@ public class Person: NSManagedObject {
                 personEntity.mass = dictionary["mass"] as? String
                 personEntity.skin_color = dictionary["skin_color"] as? String
                 personEntity.hair_color = dictionary["skin_color"] as? String
+                personEntity.eye_color = dictionary["eye_color"] as? String
                 
-
                 return personEntity
             }
             

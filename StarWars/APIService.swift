@@ -15,7 +15,8 @@ enum Result <T> {
 
 class APIService: NSObject {
     
-    let query = "films"
+//    let query = "films"
+    var query = String()
     lazy var endPoint: String = {
         return "https://swapi.co/api/\(self.query)"
     }()

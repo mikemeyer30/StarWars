@@ -5,19 +5,48 @@
 
 import UIKit
 
-        class FilmsTableViewController: UITableViewController {
+class FilmsTableViewController: UITableViewController, UISearchResultsUpdating {
+    
+    
+    
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+            
+            var filteredResults = Film.getAllFilms() as! [Film]
+            let searchController = UISearchController(searchResultsController: nil)
+    
+            
+            
             
                 // For doing tasks before the view loads
                 override func viewWillAppear(_ animated: Bool) {
                     
                     
+               
+                    // SET UP SEARCH CONTROLLER
+                    searchController.searchResultsUpdater = self
+                    searchController.dimsBackgroundDuringPresentation = false
+                    definesPresentationContext = true
+//                    tableView.tableHeaderView = searchController.searchBar
+                    searchController.searchBar.autocapitalizationType = .none
+                    navigationItem.searchController = searchController
+                    
                     // Check to see if there is already data in core data for this entity
                     if Film.getAllFilms().count > 0 {
+                        self.activityIndicator.stopAnimating()
                         return
                     }
                     
+                    
+//                    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "filmTableCell")
+                    
+                    
+                    
+                    
                     // Invoke our API Service
                     let service = APIService()
+                    service.query = "films"
                     
                     
                         service.getDataWith(completion: {
@@ -44,6 +73,9 @@ import UIKit
                                 notification in
                                 //THIS IS WHAT WE WANT TO DO WHEN WE RECIEVE THIS NOTIFICATION
                             self.tableView.reloadData()
+                                self.activityIndicator.stopAnimating()
+                                self.filteredResults = Film.getAllFilms() as! [Film]
+                                self.tableView.reloadData()
                                 
                             }
                             
@@ -55,7 +87,7 @@ import UIKit
             
             override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
                 
-                return Film.getAllFilms().count
+                return filteredResults.count
                 
             }
             
@@ -68,13 +100,36 @@ import UIKit
                 
                 // Figure out which film object should appear
                 
-                let thisFilm = Film.getAllFilms()[indexPath.row] as! Film
+                let thisFilm = filteredResults[indexPath.row] as! Film
                 
                 // Format the cell with information from the film object
                 filmCell.textLabel?.text = thisFilm.title
                 
                 // Return the formatted cell
                 return filmCell
+                
+                
+            }
+    
+            func updateSearchResults(for searchController: UISearchController) {
+                
+                // RESET THE ARRAY EVERY TIME WE SEARCH
+                
+                    filteredResults = Film.getAllFilms() as! [Film]
+                
+                
+                // REACT TO SEARCH INPUT
+                
+                if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+                    filteredResults = filteredResults.filter {
+                        film in return (film.title?.lowercased().contains(searchText.lowercased()))!
+                    }
+                }
+                
+                // RELOAD THE TABLE DATA WITH THE FILTERED RESULTS
+                
+                self.tableView.reloadData()
+                
                 
                 
             }
